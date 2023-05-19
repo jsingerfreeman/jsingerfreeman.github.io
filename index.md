@@ -1,5 +1,2 @@
-Here you can say lots of fun things about your site.
+This summer I am taking one stats course (ST 558) and working on an internship at Duke Health.
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
