@@ -7,9 +7,6 @@ The antigen indicates the presence of a deadly fungal infection that affects pat
 
 Here is a picture of a colony of this fungus.   <br>
 
-![alt text](http://url/to/img.png)
+<img src="_posts/Penicillium_marneffei_colony.jpg" width="10%" height="10%">
 
-```{r graphics, out.width = "800px", eval = TRUE}
-library(dplyr)
-knitr::include_graphics("C:\Users\singe\Downloads\Penicillium_marneffei_colony.jpg")
-```
+
