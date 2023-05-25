@@ -8,5 +8,3 @@ The antigen indicates the presence of a deadly fungal infection that affects pat
 Here is a picture of a colony of this fungus.   <br>
 
 <img src="_posts/Penicillium_marneffei_colony.jpg" width="10%" height="10%">
-
-
