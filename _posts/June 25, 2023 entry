@@ -1,3 +1,7 @@
+layout: post
+title: "Project 1"
+date: 2023-06-25 
+c
 In Project 1 for ST 558 I created a small vignette showing functions to extractinformation from the polygon.io API.   I ask the user for a an initial data and a following period of time.  
 For the initial date I obtain the 5 most heavily-traded equity securities and certain financial information for them.   
 I then obtain financial information for those top 5 securities for the provided range of daates. 
