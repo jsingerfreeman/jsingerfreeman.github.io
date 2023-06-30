@@ -1,0 +1,33 @@
+---
+title: "Interesting R"
+author: "Jose Singer-Freeman"
+date: "2023-06-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+I believe that  the coolest thing I've learned about programming in R this semester is the long wide format.  The following is an example. 
+
+```{r}
+
+library(tidyverse)
+data(mtcars)
+
+
+
+long.data_num<-mtcars%>%pivot_longer(-vs,names_to="variables",values_to="value")
+library(rstatix )
+
+#Simultaneous Wilcoxon rank-sum tests (variables are not normally distributed)
+wilcox_test <- long.data_num %>%
+  group_by(variables) %>%
+  wilcox_test(value ~ vs)%>%
+  adjust_pvalue(method = "BH") %>%
+   add_significance()
+
+wilcox_test
+
+```
+
