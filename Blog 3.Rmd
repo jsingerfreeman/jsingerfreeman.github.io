@@ -2,23 +2,25 @@
 title: "Interesting R"
 author: "Jose Singer-Freeman"
 date: "2023-06-30"
-output: fithub_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE)
+library(tidyverse)
+library(rstatix )
 ```
 I believe that  the coolest thing I've learned about programming in R this semester is the long wide format.  The following is an example. 
 
-```{r}
+```{r echo=TRUE}
 
-library(tidyverse)
+
 data(mtcars)
 
 
 
 long.data_num<-mtcars%>%pivot_longer(-vs,names_to="variables",values_to="value")
-library(rstatix )
+
 
 #Simultaneous Wilcoxon rank-sum tests (variables are not normally distributed)
 wilcox_test <- long.data_num %>%
