@@ -1,4 +1,4 @@
-## **Project 2 for ST 558**
+## **Project 2**
 
 Below are the links to the Project 2 page and repo, hosted by my partner Landon Batts: 
 - [Page for Project 2](https://lrbatts.github.io/Project2/)
