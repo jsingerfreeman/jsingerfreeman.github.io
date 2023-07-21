@@ -4,7 +4,7 @@ author: "Jose Singer-Freeman"
 date: "2023-07-20"
 output: 
   github_document
-output_dir: "path/to/your/directory"
+output_dir: "\_posts"
 output_options:
   keep_md: true
 ---
@@ -20,7 +20,7 @@ We just finished our section on machine learning.  We saw several supervised lea
 
 
 ## Example
-For example, in the ubiquitous iris data set, I can use knn to predict the species of the flower.  There are three species:  setosa, virginica and versicolor.  Setting the default objective  to maximize accuracy, and using 10-fold cross validation, the best model has k=9.  That is, the 9 nearest neighboring points are considered to classify  species..  The accuracy is 97.3
+For example, in the ubiquitous iris data set, I can use knn to predict the species of the flower.  There are three species:  setosa, virginica and versicolor.  Setting the default objective  to maximize accuracy, and using 10-fold cross validation, the best model has k=7.  That is, the 7 nearest neighboring points are considered to classify  species..  The accuracy is 97.3
 
 
 ```{r echo=TRUE}
