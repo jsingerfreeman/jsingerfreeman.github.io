@@ -1,0 +1,52 @@
+Blog 4
+================
+Jose Singer-Freeman
+2023-07-20
+
+## KNN
+
+We just finished our section on machine learning. We saw several
+supervised learning methods. One such method which seems simple but
+interesting is k-nearest neighbors or KNN for short. It can be used to
+classify or predict based on the majority class (for classification) or
+the average (for regression) of its k-nearest neighbors in the feature
+space. A distance metric is used to measure the similarity between data
+points. The distance metric is usually euclidean distance for continuous
+predictors and Manhattan distance for categorical ones. I learned this
+Summer that when combined these are the Gowen metric.
+
+## Example
+
+For example, in the ubiquitous iris data set, I can use knn to predict
+the species of the flower. There are three species: setosa, virginica
+and versicolor. Setting the default objective to maximize accuracy, and
+using 10-fold cross validation, the best model has k=7. That is, the 7
+nearest neighboring points are considered to classify species.. The
+accuracy is 97.3
+
+``` r
+ctrl <- trainControl(method = "cv", number = 10)
+
+model <- train(Species ~ ., data = iris, method = "knn", trControl = ctrl)
+
+model
+```
+
+    ## k-Nearest Neighbors 
+    ## 
+    ## 150 samples
+    ##   4 predictor
+    ##   3 classes: 'setosa', 'versicolor', 'virginica' 
+    ## 
+    ## No pre-processing
+    ## Resampling: Cross-Validated (10 fold) 
+    ## Summary of sample sizes: 135, 135, 135, 135, 135, 135, ... 
+    ## Resampling results across tuning parameters:
+    ## 
+    ##   k  Accuracy   Kappa
+    ##   5  0.9666667  0.95 
+    ##   7  0.9666667  0.95 
+    ##   9  0.9666667  0.95 
+    ## 
+    ## Accuracy was used to select the optimal model using the largest value.
+    ## The final value used for the model was k = 9.
