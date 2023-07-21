@@ -4,7 +4,7 @@ author: "Jose Singer-Freeman"
 date: "2023-07-20"
 output: 
   github_document
-output_dir: "\_posts"
+#output_dir: "~\_posts"
 output_options:
   keep_md: true
 ---
