@@ -7,15 +7,19 @@ output: github_document"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.path = "../images/")
-```
-
-We just finished our section on machine learning.  We saw several supervised learning methods.  One such method which seems simple but interesting is k-nearest neighbors or knn for short. It can be used to classify or predict  based on the majority class (for classification) or the average (for regression) of its k-nearest neighbors in the feature space. A distance metric is used to measure the similarity between data points. The distance metric is usually euclidean distance for continuous predictors and Manhattan distance for categorical ones.  I learned this Summer that when combined these are  the Gowen metric.
-
-For example, in the ubiquitous iris data set, I can use knn to predict the species of the flower.  There are three species:  setosa, virginica and versicolor.  If  the objective is to maximize accurace, then the best model has k=9, i.e., the 9 nearest neighboring points are considered to classify the species 
-
-
-```{r}
+library(tidyverse)
 library(caret)
+```
+##  KNN
+
+We just finished our section on machine learning.  We saw several supervised learning methods.  One such method which seems simple but interesting is k-nearest neighbors or KNN for short. It can be used to classify or predict  based on the majority class (for classification) or the average (for regression) of its k-nearest neighbors in the feature space. A distance metric is used to measure the similarity between data points. The distance metric is usually euclidean distance for continuous predictors and Manhattan distance for categorical ones.  I learned this Summer that when combined these are  the Gowen metric.
+
+
+## Example
+For example, in the ubiquitous iris data set, I can use knn to predict the species of the flower.  There are three species:  setosa, virginica and versicolor.  Setting the default objective  to maximize accuracy, and using 10-fold cross validation, the best model has k=9.  That is, the 9 nearest neighboring points are considered to classify  species..  The accuracy is 97.3
+
+
+```{r echo=TRUE}
 
 ctrl <- trainControl(method = "cv", number = 10)
 
