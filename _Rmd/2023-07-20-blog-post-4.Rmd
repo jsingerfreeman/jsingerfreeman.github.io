@@ -2,7 +2,11 @@
 title: "Blog 4"
 author: "Jose Singer-Freeman"
 date: "2023-07-20"
-output: github_document"
+output: 
+  github_document
+output_dir: "path/to/your/directory"
+output_options:
+  keep_md: true
 ---
 
 ```{r setup, include=FALSE}
